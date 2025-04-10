@@ -1,6 +1,6 @@
 ### 1. Create a service redis-service to expose the redis application within the cluster on port 6379.
 
-** kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml
+``` kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml ```
 
 ### 2. Create a deployment named webapp using the image kodekloud/webapp-color with 3 replicas.
 
