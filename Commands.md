@@ -4,4 +4,4 @@
 
 ### 2. Create a deployment named webapp using the image kodekloud/webapp-color with 3 replicas.
 
-* kubectl create deploy webapp --image=kodekloud/webapp-color --replicas=3
+``` kubectl create deploy webapp --image=kodekloud/webapp-color --replicas=3 ```
