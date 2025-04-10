@@ -34,3 +34,7 @@ kubectl create deploy redis-deploy --image=redis --replicas=2 -n dev-ns
 kubectl run httpd --image=httpd:alpine 
 kubectl expose pod httpd --port=80 --name httpd --type=ClusterIP
 ```
+OR
+```
+kubectl run httpd --image=httpd:alpine --port=80 --expose
+```
