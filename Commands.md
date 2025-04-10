@@ -20,5 +20,7 @@
 
 ### 6. Create a pod called httpd using the image httpd:alpine in the default namespace. Next, create a service of type ClusterIP by the same name (httpd). The target port for the service should be 80.
 
-``` kubectl run httpd --image=httpd:alpine ```
-``` kubectl expose pod httpd --port=80 --name httpd --type=ClusterIP ```
+``` 
+kubectl run httpd --image=httpd:alpine 
+kubectl expose pod httpd --port=80 --name httpd --type=ClusterIP
+```
