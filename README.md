@@ -1,3 +1,7 @@
+# Useful Commands:
+
+## Imperative Commands: 
+
 ### 1. Create a service redis-service to expose the redis application within the cluster on port 6379.
 
 ```
