@@ -35,7 +35,7 @@ The default Kubernetes scheduler takes taints and tolerations into account when 
 ```
 kubectl taint nodes node01 spray=mortein:NoSchedule
 ```
-1. Remove the taint on controlplane, which currently has the taint effect of NoSchedule.
+2. Remove the taint on controlplane, which currently has the taint effect of NoSchedule.
 
 Run the command: 
 ```
