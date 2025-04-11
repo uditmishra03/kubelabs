@@ -29,3 +29,15 @@ tolerations:
   effect: "NoSchedule"
 ```
 The default Kubernetes scheduler takes taints and tolerations into account when selecting a node to run a particular Pod. However, if you manually specify the .spec.nodeName for a Pod, that action bypasses the scheduler; the Pod is then bound onto the node where you assigned it, even if there are NoSchedule taints on that node that you selected. If this happens and the node also has a NoExecute taint set, the kubelet will eject the Pod unless there is an appropriate tolerance set.
+
+### Examples
+1. Create a taint on node01 with key of spray, value of mortein and effect of NoSchedule
+```
+kubectl taint nodes node01 spray=mortein:NoSchedule
+```
+1. Remove the taint on controlplane, which currently has the taint effect of NoSchedule.
+
+Run the command: 
+```
+kubectl taint nodes controlplane node-role.kubernetes.io/control-plane:NoSchedule- to untaint the node.
+```
