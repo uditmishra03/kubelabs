@@ -1,12 +1,11 @@
-🚫 Limitations of the Default Scheduler
+🚫 Limitations of the Default Scheduler:
 
-    Generic scheduling logic:
+Generic scheduling logic:
 
-        It’s built to handle general workloads, not specific use cases like GPUs, latency-sensitive apps, or hard node affinity.
+* It’s built to handle general workloads, not specific use cases like GPUs, latency-sensitive apps, or hard node affinity.
 
-    No support for advanced business rules:
-
-        Like prioritizing high-paying tenant workloads over others, or keeping certain services isolated.
+* No support for advanced business rules:
+  Like prioritizing high-paying tenant workloads over others, or keeping certain services isolated.
 
 ✅ Why Use a Custom Scheduler or Multiple Schedulers?
 1. Workload Segregation
@@ -24,10 +23,10 @@
 3. Hard Constraints / Custom Rules
 
     Business-specific rules like:
-
-        “Finance workloads must only run on secure nodes.”
-
-        “No two replicas on the same rack or zone.”
+    
+    “Finance workloads must only run on secure nodes.”
+    
+    “No two replicas on the same rack or zone.”
 
     You can’t always enforce this with taints/tolerations or affinity rules alone.
 
@@ -51,17 +50,17 @@
 
 🤖 How It Works
 
-    You run multiple scheduler Pods, each watching for different Pods (based on schedulerName in the Pod spec).
+You run multiple scheduler Pods, each watching for different Pods (based on schedulerName in the Pod spec).
 
-    Example Pod using a custom scheduler:
+Example Pod using a custom scheduler:
 
-    spec:
-      schedulerName: custom-scheduler
+spec:
+  schedulerName: custom-scheduler
 
 ⚠️ Why Not Just Replace the Default?
 
-    Compatibility risks – Default scheduler gets all the updates and bug fixes.
+Compatibility risks – Default scheduler gets all the updates and bug fixes.
 
-    Complexity – Writing your own scheduler isn't trivial.
+Complexity – Writing your own scheduler isn't trivial.
 
-    Better to run in parallel – Keep default for regular workloads and route only what you need to the custom one.
+Better to run in parallel – Keep default for regular workloads and route only what you need to the custom one.
