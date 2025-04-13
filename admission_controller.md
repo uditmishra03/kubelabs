@@ -51,4 +51,5 @@ They're like the hall monitors or gatekeepers who can do two things:
   Some fix little things, others reject bad behavior.
   Without them, the school (cluster) would be chaos! 🎓💥
 
+Kubernetes Documentation: https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/ 
 
