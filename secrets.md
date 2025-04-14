@@ -20,3 +20,30 @@ Run the command:
 ```
 kubectl create secret generic db-secret --from-literal=DB_Host=sql01 --from-literal=DB_User=root --from-literal=DB_Password=password123
 ```
+
+### 2. Configure webapp-pod to load environment variables from the newly created secret.
+Delete and recreate the pod if required.
+* Pod name: webapp-pod
+* Image name: kodekloud/simple-webapp-mysql
+* Env From: Secret=db-secret
+
+Solution:
+```
+---
+apiVersion: v1 
+kind: Pod 
+metadata:
+  labels:
+    name: webapp-pod
+  name: webapp-pod
+  namespace: default 
+spec:
+  containers:
+  - image: kodekloud/simple-webapp-mysql
+    imagePullPolicy: Always
+    name: webapp
+    envFrom:
+    - secretRef:
+        name: db-secret
+```
+
