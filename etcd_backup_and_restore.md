@@ -9,6 +9,7 @@ root@controlplane:~# ETCDCTL_API=3 etcdctl --endpoints=https://[127.0.0.1]:2379 
 --key=/etc/kubernetes/pki/etcd/server.key \
 snapshot save /opt/snapshot-pre-boot.db
 ```
+Link: https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/#securing-communication
 
 ### 2. . Restore the original state of the cluster using the backup file.
 * Deployments: 2
@@ -25,6 +26,7 @@ snapshot restore /opt/snapshot-pre-boot.db
 2022-03-25 09:19:27.266709 I | etcdserver/membership: added member 8e9e05c52164694d [http://localhost:2380] to cluster cdf818194e3a8c32
 root@controlplane:~# 
 ```
+Link: https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/#built-in-snapshot
 
 Note: In this case, we are restoring the snapshot to a different directory but in the same server where we took the backup (the controlplane node) As a result, the only required option for the restore command is the --data-dir.
 
