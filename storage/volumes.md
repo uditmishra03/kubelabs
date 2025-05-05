@@ -27,7 +27,6 @@ spec:
     hostPath:
       path:  /var/log/webapp # directory location on host
       type: Directory # this field is optional
-    resources: {}
   dnsPolicy: ClusterFirst
   restartPolicy: Always
 status: {}
