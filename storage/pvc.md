@@ -12,7 +12,7 @@ metadata:
   name: claim-log-1
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 50Mi
