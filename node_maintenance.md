@@ -44,3 +44,15 @@ NAME           STATUS   ROLES           AGE   VERSION
 controlplane   Ready    control-plane   14m   v1.32.0
 node01         Ready    <none>          13m   v1.32.0
 ```
+
+### Useful commands:
+```
+kubectl describe nodes node01 -o \
+  jsonpath='{.items[*].metadata.labels.version}'
+
+kubectl label node node01 color=blue
+
+kubectl get node node01 -o json | jq '.spec.taints'
+
+kubectl get node controlplane -o json | jq '.spec.taints'
+```

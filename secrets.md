@@ -47,3 +47,16 @@ spec:
         name: db-secret
 ```
 
+## Useful commands:
+
+```
+echo -n "password123" | base64
+
+kubectl create secret generic db-secret --from-literal=DB_Host=sql01 --from-literal=DB_User=root --from-literal=DB_Password=password123 
+
+kubectl create secret generic db-secret --from-file=creds
+
+kubectl create secret tls webhook-server-tls -n webhook-demo \
+  --cert=/root/keys/webhook-server-tls.crt \
+  --key=/root/keys/webhook-server-tls.key
+```

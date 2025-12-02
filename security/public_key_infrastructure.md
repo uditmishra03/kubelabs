@@ -68,3 +68,12 @@ Signatures can be verified using the sender’s public key.
 
 ![ChatGPT Image Apr 17, 2025, 05_39_10 PM](https://github.com/user-attachments/assets/8ed48ce4-f1f9-4fa0-bf63-3e4585e44060)
 
+### Useful Commands:
+
+```
+To read the encrypted cert file in text format:
+
+openssl x509 -in /etc/kubernetes/pki/etcd/server.crt -text -noout
+
+openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text -noout
+```
