@@ -1,6 +1,6 @@
 ### Problem statement:
 
-/Users/uditmishra/myDev/kubelabs/practice_questions/img/Screenshot 2025-12-05 at 23.29.58.png
+![problem](image-1.png)
 
 ```
 apiVersion: apps/v1
