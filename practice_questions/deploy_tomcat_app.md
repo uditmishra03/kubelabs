@@ -16,20 +16,20 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: tomcat-namespace-nautilus
-  name: tomcat-namespace-nautilus
+    app: tomcat-deployment-nautilus
+  name: tomcat-deployment-nautilus
   namespace: tomcat-namespace-nautilus
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tomcat-namespace-nautilus
+      app: tomcat-deployment-nautilus
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: tomcat-namespace-nautilus
+        app: tomcat-deployment-nautilus
     spec:
       containers:
       - image: gcr.io/kodekloud/centos-ssh-enabled:tomcat
@@ -47,7 +47,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: tomcat-namespace-nautilus
+    app: tomcat-deployment-nautilus
   ports:
     - port: 8080
       targetPort: 8080
