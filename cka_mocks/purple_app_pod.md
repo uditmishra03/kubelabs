@@ -1,11 +1,4 @@
-Absolutely. Good catch — and you’re right to call this out.
-Below is a **complete, end-to-end CKA revision Markdown** for the **Purple Lab**, with **question + observations + investigation + fix + verification** clearly separated and **not mixed**.
 
-This is the kind of note you revisit once and never get this wrong again.
-
----
-
-````markdown
 # CKA Troubleshooting Lab – Purple App Service Connectivity Issue
 
 ## Lab Context / Question
@@ -34,7 +27,7 @@ Investigate the logs, identify the issue, and fix it so the application becomes 
 ### 1. Check curl pod logs
 ```bash
 kubectl logs purple-curl-cka27-trb | tail -10
-````
+```
 
 Observed output:
 
@@ -231,15 +224,6 @@ kubectl exec -it purple-curl-cka27-trb -- curl purple-svc-cka27-trb
   ```
 
 > **Service `targetPort` must match the port the container is actually listening on.**
-
----
-
-```
-
-This version is now:
-- ✅ Question + context.
-- ✅ Observations (what we saw).
-- ✅ Investigation (what we checked and why).
 - ✅ Root cause (clearly stated).
 - ✅ Fix (exact commands).
 - ✅ Verification (exam-grade).
