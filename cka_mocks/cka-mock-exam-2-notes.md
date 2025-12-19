@@ -241,6 +241,27 @@ rules:
     port: 80
 ```
 
+### Flow of request from Client till the pod(app)
+```
+Client
+  |
+  |  NodeIP:31377        (nodePort)
+  v
+Service (envoy-gateway)
+  |
+  |  port 80             (Gateway listener)
+  v
+HTTPRoute
+  |
+  |  backendRef.port=80  (Service port)
+  v
+Service (api-service)
+  |
+  |  targetPort=3000     (Container port)
+  v
+Pod (API app)
+
+```
 ### Notes
 - More specific path first.
 - Default route always last.
