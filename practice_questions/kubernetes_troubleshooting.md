@@ -1,1 +1,1 @@
-![feedback](image-6.png)
+![feedback](img/image-6.png)

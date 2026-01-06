@@ -1,6 +1,6 @@
 ### Problem statement:
 
-![envvars-problemo](image-7.png)
+![envvars-problemo](img/image-7.png)
 ```
 apiVersion: v1
 kind: Pod

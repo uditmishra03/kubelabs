@@ -1,6 +1,6 @@
 ### Problem statement
 
-![problem](image-4.png)
+![problem](img/image-4.png)
 
 ```
 apiVersion: v1

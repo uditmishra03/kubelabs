@@ -1,6 +1,6 @@
 ### Problem statement:
 
-![alt text](image.png)
+![alt text](img/image.png)
 
 ```
 apiVersion: v1

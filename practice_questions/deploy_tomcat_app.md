@@ -1,6 +1,6 @@
 ### Problem statement
 
-![tomcat-problem](image-3.png)
+![tomcat-problem](img/image-3.png)
 
 ```
 apiVersion: v1

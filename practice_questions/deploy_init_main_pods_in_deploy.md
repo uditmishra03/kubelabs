@@ -1,6 +1,6 @@
 ### Problem Statement
 
-![ic-problemo](image-5.png)
+![ic-problemo](img/image-5.png)
 
 ```
 apiVersion: apps/v1
