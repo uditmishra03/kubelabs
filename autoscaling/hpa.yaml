@@ -20,3 +20,5 @@ spec:
         averageValue: "1000"
 
 # HPA to scale the api-deployment in api namespace based on custom metric 'requests_per_second' with min 1 and max 20 replicas
+
+# Pay attention to spec.metrics sectionm, there instead of resource type metric, we are using Pods type metric to define custom metric.
