@@ -47,9 +47,19 @@ spec:
 
 ### Problem Statement
 
+**SECTION: STORAGE**
+
 ![Sidecar Container Pod Question](img/sidecar-container-pod.png)
 
-Create a pod with a main container and a sidecar container sharing logs via a shared volume.
+Solve this question on: `ssh cluster2-controlplane`
+
+In the `cka-multi-containers` namespace, proceed to create a pod named `cka-sidecar-pod` that adheres to the following specifications:
+
+1. The first container, labeled `main-container`, is required to run the `nginx:1.27`, which writes the current date along with a greeting message `Hi I am from Sidecar container` to `/log/app.log`.
+
+2. The second container, identified as `sidecar-container`, must use the `nginx:1.25` image and serve the `app.log` file as a webpage located at `/usr/share/nginx/html`.
+
+**Note:** Do not rename `app.log` to `index.html`. The file name should remain `app.log` and be available at `/app.log` via the nginx server.
 
 ### Solution
 
@@ -149,7 +159,23 @@ spec:
 
 ![PV PVC Storage Class Question](img/pv-pvc-storage-class.png)
 
-Create a PV and PVC with specific storage class, node affinity, and label selectors.
+Solve this question on: `ssh cluster1-controlplane`
+
+A storage class called `coconut-stc-cka01-str` was created earlier.
+
+Use this storage class to create a `persistent volume` called `coconut-pv-cka01-str` as per below requirements:
+
+- Capacity should be `100Mi`.
+- The volume type should be `hostpath` and the path should be `/opt/coconut-stc-cka01-str`.
+- Use `coconut-stc-cka01-str` storage class.
+- This volume must be created on `cluster1-node01` (the `/opt/coconut-stc-cka01-str` directory already exists on this node).
+- It must have a label with key: `storage-tier` with value: `gold`.
+
+Also, create a `persistent volume claim` with the name `coconut-pvc-cka01-str` as per the below specs:
+
+- Request `50Mi` of storage from `coconut-pv-cka01-str` PV. It must use `matchLabels` to use the PV.
+- Use `coconut-stc-cka01-str` storage class.
+- The access mode must be `ReadWriteMany`.
 
 **⚠️ Important:** Read the question carefully - note the storage requirements and node affinity!
 
