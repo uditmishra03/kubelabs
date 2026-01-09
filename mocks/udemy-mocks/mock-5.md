@@ -6,7 +6,7 @@
 
 ### Problem Statement
 
-![HTTPRoute Canary Headers Question](img/httproute-canary-headers.png)
+![HTTPRoute Canary Answer Question](img/httproute-canary-answer.png)
 
 Create an HTTPRoute that routes traffic based on the `X-Environment: canary` header to the canary service, otherwise routes to the main service.
 
