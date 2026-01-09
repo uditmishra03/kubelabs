@@ -34,77 +34,77 @@
 ## 📋 File Movements
 
 ### Workloads Directory
-| Original Location | New Location |
-|-------------------|--------------|
-| `deamon_sets.md` | `workloads/deamon_sets.md` |
-| `deploy_nodeapp_deploy_service.md` | `workloads/deploy_nodeapp_deploy_service.md` |
-| `Multi_Containers.md` | `workloads/Multi_Containers.md` |
-| `init_containers.md` | `workloads/init_containers.md` |
-| `pod_lifecycle/*` | `workloads/*` |
-| `mocks/udemy-mocks/deployment_with_sidecar.yaml` | `workloads/deployment_with_sidecar.yaml` |
+| Original Location                                | New Location                                 |
+| ------------------------------------------------ | -------------------------------------------- |
+| `deamon_sets.md`                                 | `workloads/deamon_sets.md`                   |
+| `deploy_nodeapp_deploy_service.md`               | `workloads/deploy_nodeapp_deploy_service.md` |
+| `Multi_Containers.md`                            | `workloads/Multi_Containers.md`              |
+| `init_containers.md`                             | `workloads/init_containers.md`               |
+| `pod_lifecycle/*`                                | `workloads/*`                                |
+| `mocks/udemy-mocks/deployment_with_sidecar.yaml` | `workloads/deployment_with_sidecar.yaml`     |
 
 ### Scheduling Directory
-| Original Location | New Location |
-|-------------------|--------------|
+| Original Location          | New Location                          |
+| -------------------------- | ------------------------------------- |
 | `taints_and_toleration.md` | `scheduling/taints_and_toleration.md` |
-| `node_affinity.md` | `scheduling/node_affinity.md` |
-| `node_maintenance.md` | `scheduling/node_maintenance.md` |
-| `static_pod.md` | `scheduling/static_pod.md` |
-| `multiple_scheduler.md` | `scheduling/multiple_scheduler.md` |
+| `node_affinity.md`         | `scheduling/node_affinity.md`         |
+| `node_maintenance.md`      | `scheduling/node_maintenance.md`      |
+| `static_pod.md`            | `scheduling/static_pod.md`            |
+| `multiple_scheduler.md`    | `scheduling/multiple_scheduler.md`    |
 
 ### Autoscaling Directory
-| Original Location | New Location |
-|-------------------|--------------|
-| `hpa.md` | `autoscaling/hpa.md` |
-| `vpa.md` | `autoscaling/vpa.md` |
+| Original Location            | New Location           |
+| ---------------------------- | ---------------------- |
+| `hpa.md`                     | `autoscaling/hpa.md`   |
+| `vpa.md`                     | `autoscaling/vpa.md`   |
 | `mocks/udemy-mocks/hpa.yaml` | `autoscaling/hpa.yaml` |
 
 ### Cluster Management Directory
-| Original Location | New Location |
-|-------------------|--------------|
-| `etcd_backup_and_restore.md` | `cluster-management/etcd_backup_and_restore.md` |
-| `admission_controller.md` | `cluster-management/admission_controller.md` |
-| `cluster_upgrade/cluster_upgrade.md` | `cluster-management/cluster_upgrade.md` |
-| `cluster_upgrade/node_upgrade.md` | `cluster-management/node_upgrade.md` |
+| Original Location                    | New Location                                    |
+| ------------------------------------ | ----------------------------------------------- |
+| `etcd_backup_and_restore.md`         | `cluster-management/etcd_backup_and_restore.md` |
+| `admission_controller.md`            | `cluster-management/admission_controller.md`    |
+| `cluster_upgrade/cluster_upgrade.md` | `cluster-management/cluster_upgrade.md`         |
+| `cluster_upgrade/node_upgrade.md`    | `cluster-management/node_upgrade.md`            |
 
 ### Storage Directory
-| Original Location | New Location |
-|-------------------|--------------|
-| `storage_class/*` | `storage-class/*` |
+| Original Location                        | New Location                  |
+| ---------------------------------------- | ----------------------------- |
+| `storage_class/*`                        | `storage-class/*`             |
 | `practice_questions/pv-pvc-pod-svc-app/` | `storage/pv-pvc-pod-svc-app/` |
 
 ### Security Directory
-| Original Location | New Location |
-|-------------------|--------------|
-| `secrets.md` | `security/secrets.md` |
+| Original Location                                  | New Location                                   |
+| -------------------------------------------------- | ---------------------------------------------- |
+| `secrets.md`                                       | `security/secrets.md`                          |
 | `ClusterRoles/ClusterRoles_clusterroleBindings.md` | `security/ClusterRoles_clusterroleBindings.md` |
 
 ### Networking Directory
-| Original Location | New Location |
-|-------------------|--------------|
+| Original Location                | New Location              |
+| -------------------------------- | ------------------------- |
 | `mocks/udemy-mocks/ingress.yaml` | `networking/ingress.yaml` |
 
 ### Mocks Directory
-| Original Location | New Location |
-|-------------------|--------------|
-| `cka_mocks/*.md` | `mocks/cka-troubleshooting/*.md` |
-| `cka_mocks/img/*` | `mocks/cka-troubleshooting/img/*` |
-| `cka_mocks/udemy-mocks-examples/*` | `mocks/udemy-mocks/*` |
-| `cka_mocks/udemy-mocks-examples/img/*` | `mocks/udemy-mocks/img/*` |
+| Original Location                      | New Location                      |
+| -------------------------------------- | --------------------------------- |
+| `cka_mocks/*.md`                       | `mocks/cka-troubleshooting/*.md`  |
+| `cka_mocks/img/*`                      | `mocks/cka-troubleshooting/img/*` |
+| `cka_mocks/udemy-mocks-examples/*`     | `mocks/udemy-mocks/*`             |
+| `cka_mocks/udemy-mocks-examples/img/*` | `mocks/udemy-mocks/img/*`         |
 
 ### Imperative Commands Directory
-| Original Location | New Location |
-|-------------------|--------------|
+| Original Location                         | New Location                                  |
+| ----------------------------------------- | --------------------------------------------- |
 | `imperative_cmds/pods_imperative_cmds.md` | `imperative-commands/pods_imperative_cmds.md` |
 
 ### Miscellaneous Directory
-| Original Location | New Location |
-|-------------------|--------------|
-| `file.yaml` | `misc/file.yaml` |
-| `somefile.md` | `misc/somefile.md` |
+| Original Location  | New Location            |
+| ------------------ | ----------------------- |
+| `file.yaml`        | `misc/file.yaml`        |
+| `somefile.md`      | `misc/somefile.md`      |
 | `setup_bashrc.txt` | `misc/setup_bashrc.txt` |
 | `misc_commands.md` | `misc/misc_commands.md` |
-| `image.png` | `misc/image.png` |
+| `image.png`        | `misc/image.png`        |
 
 ---
 

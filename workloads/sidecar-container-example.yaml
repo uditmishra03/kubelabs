@@ -9,19 +9,19 @@ metadata:
     run: webserver
 spec:
   volumes:
-    - name: shared-logs
-      emptyDir: {}
+  - name: shared-logs
+    emptyDir: {}
   containers:
-    # Main application container
-    - name: nginx-container
-      image: nginx:latest
-      volumeMounts:
-        - name: shared-logs
-          mountPath: /var/log/nginx
-    # Sidecar container for log processing
-    - name: sidecar-container
-      image: ubuntu:latest
-      command: ["sh","-c","while true; do cat /var/log/nginx/access.log /var/log/nginx/error.log; sleep 30; done"]
-      volumeMounts:
-        - name: shared-logs
-          mountPath: /var/log/nginx
+  # Main application container
+  - name: nginx-container
+    image: nginx:latest
+    volumeMounts:
+    - name: shared-logs
+      mountPath: /var/log/nginx
+  # Sidecar container for log processing
+  - name: sidecar-container
+    image: ubuntu:latest
+    command: [ "sh", "-c", "while true; do cat /var/log/nginx/access.log /var/log/nginx/error.log; sleep 30; done" ]
+    volumeMounts:
+    - name: shared-logs
+      mountPath: /var/log/nginx
